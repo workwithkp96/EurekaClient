@@ -15,8 +15,8 @@ public class EurekaClientController {
 
     @GetMapping("/fetch-users")
     public String fetchUsers() {
-        //Here, http://USER-SERVICE is the name of the service registered in Eureka.
+        //Here, http://EUREKA-CLIENT2 is the name of the service registered in Eureka.
         //Spring Cloud will automatically resolve the service name to its instances and balance the load through Rest Template.
-        return restTemplate.getForObject("http://EUREKA CLIENT2/data", String.class);
+        return restTemplate.getForObject("http://EUREKA-CLIENT2/data", String.class);
     }
 }
